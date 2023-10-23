@@ -20,7 +20,7 @@ jobs:
           path: 'temp'
       - uses: actions/checkout@v3
         with:
-          repository: 'arror/hev-socks5-tunnel-iphonesimulator'
+          repository: 'productlabteam/hev-socks5-tunnel-iphonesimulator'
           path: 'fake'
           
       - name: build macos arm64_x86_64
@@ -153,9 +153,9 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Tun2SocksKit Release ${{ github.event.inputs.version }}!!!
-          commit_user_name: Arror
-          commit_user_email: hallo.maqiang@icloud.com
-          commit_author: Arror <hallo.maqiang@icloud.com>
+          commit_user_name: vanyasem
+          commit_user_email: ivan@semkin.ru
+          commit_author: Ivan Semkin <ivan@semkin.ru>
           tagging_message: ${{ github.event.inputs.version }}
           file_pattern: 'Package.swift'
           
@@ -165,7 +165,3 @@ jobs:
           draft: false
           tag_name: ${{ github.event.inputs.version }}
           files: ./HevSocks5Tunnel.xcframework.zip
-
-
-
-
